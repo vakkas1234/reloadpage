@@ -11,16 +11,3 @@ function emre(){
     window.location.href = "index.html"
    
 }
-// Sayfayı kaydederken
-function savePage() {
-    const state = { html: document.body.innerHTML };
-    history.replaceState(state, '');
-}
-
-// Sayfa yüklendiğinde
-window.onload = function() {
-    const state = history.state;
-    if (state && state.html) {
-        document.body.innerHTML = state.html;
-    }
-};
